@@ -1,0 +1,22 @@
+[project]
+name = "mcp-tutorial"
+version = "0.1.0"
+description = "Tutorial didattico su MCP server con FastMCP"
+readme = "README.md"
+authors = [
+    { name = "Stefano Vincenzi" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=4.2.0",
+]
+
+[project.scripts]
+mcp-tutorial = "mcp_tutorial.server:main"
+mcp-tutorial-http = "mcp_tutorial.server_http:main"
+mcp-tutorial-client ="mcp_tutorial.demo_client:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
